@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Item</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body { background-color: #f8f9fa; }
+        .container { margin-top: 50px; border-radius: 5px; background-color: #ffffff; padding: 30px; }
+        h1 { font-size: 24px; margin-bottom: 20px; }
+        .section-title { font-weight: bold; margin-top: 20px; margin-bottom: 10px; font-size: 20px; border-bottom: 1px solid #dee2e6; padding-bottom: 5px; }
+    </style>
+    {% load widget_tweaks %}
+</head>
+<body>
+    <div class="container">
+        <h1>Create Item</h1>
+        <form method="POST">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="supplier">Supplier</label>
+                {{ form.supplier|add_class:"form-control" }}
+            </div>
+
+            <div class="section-title">Part Details</div>
+            <div class="row">
+                <div class="col-md-4"><label for="part_number">Part Number</label>{{ form.part_number|add_class:"form-control" }}</div>
+                <div class="col-md-4"><label for="part_description">Part Description</label>{{ form.part_description|add_class:"form-control" }}</div>
+                <div class="col-md-4"><label for="unit">Unit</label>{{ form.unit|add_class:"form-control" }}</div>
+            </div>
+            <div class="row">
+                <div class="col-md-4"><label for="price">Price</label>{{ form.price|add_class:"form-control" }}</div>
+                <div class="col-md-4"><label for="cth">CTH</label>{{ form.cth|add_class:"form-control" }}</div>
+            </div>
+
+            <div class="section-title">Duty Details</div>
+            <div class="row">
+                <div class="col-md-4"><label for="bcd">BCD</label>{{ form.bcd|add_class:"form-control" }}</div>
+                <div class="col-md-4"><label for="sws">SWS</label>{{ form.sws|add_class:"form-control" }}</div>
+                <div class="col-md-4"><label for="igst">IGST</label>{{ form.igst|add_class:"form-control" }}</div>
+            </div>
+
+            <button type="submit" class="btn btn-primary mt-3">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
