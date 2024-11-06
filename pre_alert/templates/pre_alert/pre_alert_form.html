@@ -1,0 +1,145 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pre Alert Form</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Dark Mode Toggle -->
+        <div class="toggle-container" id="toggleMode">
+            <span>Toggle Dark Mode</span>
+        </div>
+
+        <form method="post">
+            {% csrf_token %}
+            <!-- Invoice Details Section -->
+            <h2 class="section-title">Invoice Details</h2>
+            <div class="form-section">
+                <div class="form-row">
+                    <label for="supplier">Supplier</label>
+                    {{ form.supplier }}
+                </div>
+                <div class="form-row">
+                    <label for="invoice_no">Invoice No</label>
+                    {{ form.invoice_no }}
+                </div>
+                <div class="form-row">
+                    <label for="date">Date</label>
+                    {{ form.date }}
+                </div>
+                <div class="form-row">
+                    <label for="goods">RM/CG/Sample</label>
+                    {{ form.goods }}
+                </div>
+                <div class="form-row">
+                    <label for="currency">Currency</label>
+                    {{ form.currency }}
+                </div>
+                <div class="form-row">
+                    <label for="inv_value">Inv Value</label>
+                    {{ form.inv_value }}
+                </div>
+            </div>
+
+            <!-- BL/AWB Information Section -->
+            <h2 class="section-title">BL/AWB Information</h2>
+            <div class="form-section">
+                <div class="form-row">
+                    <label for="bl_awb_no">BL/AWB No</label>
+                    {{ form.bl_awb_no }}
+                </div>
+                <div class="form-row">
+                    <label for="bl_awb_date">BL/AWB Date</label>
+                    {{ form.bl_awb_date }}
+                </div>
+                <div class="form-row">
+                    <label for="weight">Weight</label>
+                    {{ form.weight }}
+                </div>
+                <div class="form-row">
+                    <label for="etd">ETD</label>
+                    {{ form.etd }}
+                </div>
+                <div class="form-row">
+                    <label for="eta">ETA</label>
+                    {{ form.eta }}
+                </div>
+                <div class="form-row">
+                    <label for="forwarder">Forwarder</label>
+                    {{ form.forwarder }}
+                </div>
+                <div class="form-row">
+                    <label for="incoterm">Incoterm</label>
+                    {{ form.incoterm }}
+                </div>
+                <div class="form-row">
+                    <label for="mode">Mode</label>
+                    {{ form.mode }}
+                </div>
+                <div class="form-row">
+                    <label for="kind_of">Kind of</label>
+                    {{ form.kind_of }}
+                </div>
+                <div class="form-row">
+                    <label for="container_no">Container No</label>
+                    {{ form.container_no }}
+                </div>
+                <div class="form-row">
+                    <label for="vsl">Vsl</label>
+                    {{ form.vsl }}
+                </div>
+                <div class="form-row">
+                    <label for="nop">No of Packages (NOP)</label>
+                    {{ form.nop }}
+                </div>
+            </div>
+
+            <!-- BOE Details Section -->
+            <h2 class="section-title">BOE Details</h2>
+            <div class="form-section">
+                <div class="form-row">
+                    <label for="boe_no">BOE No</label>
+                    {{ form.boe_no }}
+                </div>
+                <div class="form-row">
+                    <label for="boe_date">BOE Date</label>
+                    {{ form.boe_date }}
+                </div>
+                <div class="form-row">
+                    <label for="ex_rate">Ex Rate</label>
+                    {{ form.ex_rate }}
+                </div>
+                <div class="form-row">
+                    <label for="dutypaid">Dutypaid</label>
+                    {{ form.dutypaid }}
+                </div>
+                <div class="form-row">
+                    <label for="boe_frt">BOE FRT</label>
+                    {{ form.boe_frt }}
+                </div>
+                <div class="form-row">
+                    <label for="boe_exw">BOE EXW</label>
+                    {{ form.boe_exw }}
+                </div>
+            </div>
+
+            <button type="submit" class="submit-btn">Submit</button>
+        </form>
+    </div>
+
+    <script>
+        const toggleButton = document.getElementById('toggleMode');
+        toggleButton.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+        });
+    </script>
+</body>
+
+</html>

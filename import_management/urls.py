@@ -22,5 +22,6 @@ urlpatterns = [
     path('api/', include('supplier.urls')), 
     path('api/', include('rest_framework.urls')),  # optional, for DRF auth
     path('item_master/', include('item_master.urls')),  # Add this line to include item_master URLs
+    path('pre_alert/', include('pre_alert.urls')),  # Include pre_alert app URLs
 
 ]

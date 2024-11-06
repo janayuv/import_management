@@ -1,0 +1,134 @@
+/* Global Container */
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 40px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  /* Section Title Styling */
+  .section-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 10px;
+  }
+  
+  /* Form Section Layout */
+  .form-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 40px;
+  }
+  
+  .form-row {
+    flex: 1 1 calc(33.333% - 20px); /* Ensures 3 fields per row */
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-row label {
+    font-weight: 600;
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 8px;
+  }
+  
+  .form-row input,
+  .form-row select,
+  .form-row textarea {
+    padding: 14px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    transition: all 0.3s ease;
+  }
+  
+  .form-row input:focus,
+  .form-row select:focus,
+  .form-row textarea:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.4);
+  }
+  
+  /* Button Styling */
+  button {
+    background-color: #007bff;
+    color: white;
+    padding: 14px 30px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .form-row {
+      flex: 1 1 100%; /* Stacks fields on smaller screens */
+    }
+  }
+  
+  /* Dark Mode Styling */
+  body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+  }
+  
+  body.dark-mode .container {
+    background-color: #1e1e1e;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+  }
+  
+  body.dark-mode .form-row input,
+  body.dark-mode .form-row select,
+  body.dark-mode .form-row textarea {
+    background-color: #333;
+    color: #e0e0e0;
+    border: 1px solid #555;
+  }
+  
+  body.dark-mode .form-row input:focus,
+  body.dark-mode .form-row select:focus,
+  body.dark-mode .form-row textarea:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.4);
+  }
+  
+  body.dark-mode .section-title {
+    color: #e0e0e0;
+  }
+  
+  /* Dark Mode Toggle Button */
+  .toggle-container {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #007bff;
+    padding: 10px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    color: white;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .toggle-container span {
+    margin-left: 10px;
+  }
+  

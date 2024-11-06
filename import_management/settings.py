@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'widget_tweaks',
     'item_master',
+    'pre_alert',
 ]
 
 MIDDLEWARE = [

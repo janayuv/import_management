@@ -1,0 +1,172 @@
+/* Basic Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    color: #333;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.container {
+    max-width: 1200px; /* Increased width for wide-screen */
+    margin: 0 auto;
+    padding: 40px; /* Increased padding for better spacing */
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+
+.form-section {
+    margin-bottom: 20px;
+}
+
+.form-row {
+    display: inline-block;
+    width: 30%;  /* Adjust this if you want more or fewer fields per row */
+    padding: 10px;
+    box-sizing: border-box;
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.submit-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #45a049;
+}
+
+.toggle-container {
+    cursor: pointer;
+    text-align: center;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+/* Dark Mode */
+body.dark-mode {
+    background-color: #333;
+    color: #fff;
+}
+
+body.dark-mode .container {
+    background-color: #444;
+}
+
+body.dark-mode .form-row {
+    background-color: #555;
+    border-radius: 5px;
+}
+
+body.dark-mode label {
+    color: #fff;
+}
+
+body.dark-mode input, 
+body.dark-mode select, 
+body.dark-mode textarea {
+    background-color: #666;
+    color: #fff;
+    border: 1px solid #fff;
+}
+
+body.dark-mode .submit-btn {
+    background-color: #333;
+    color: #fff;
+}
+
+body.dark-mode .submit-btn:hover {
+    background-color: #555;
+}
+
+/* Highlighting Section Headers with Borders and Colors */
+h2.section-title {
+    background-color: #007bff;
+    color: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    font-size: 1.8em;
+    text-align: center;
+    margin-top: 30px;
+    transition: background-color 0.3s;
+}
+
+.form-section {
+    border: 2px solid #007bff;
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: 30px;
+    background-color: #f0f8ff; /* Light background for sections */
+    transition: background-color 0.3s;
+}
+
+/* Adjusting Border for Each Section */
+.form-section h2.section-title {
+    background-color: #0056b3;
+    padding: 15px;
+    margin-top: 0;
+    border-radius: 8px 8px 0 0;
+    font-size: 1.8em;
+}
+
+.form-section .form-row {
+    border-bottom: 1px solid #007bff;
+    padding: 12px 0;
+}
+
+/* Adding rounded corners and spacing between form rows */
+.form-row {
+    padding: 12px 0;
+    margin-bottom: 15px;
+}
+
+/* Dark Mode Section Specific Updates */
+body.dark-mode h2.section-title {
+    background-color: #003366; /* Darker shade for header */
+}
+
+body.dark-mode .form-section {
+    background-color: #333; /* Darker background for form sections */
+}
+
+body.dark-mode .form-section .form-row {
+    border-bottom: 1px solid #555;
+}
+
+/* Media Query for smaller screens */
+@media (max-width: 768px) {
+    .form-row {
+        width: 100%;
+    }
+
+    .container {
+        padding: 20px;
+    }
+
+    .submit-btn {
+        width: 100%;
+    }
+}

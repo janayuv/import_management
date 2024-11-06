@@ -1,0 +1,21 @@
+{% extends 'base_generic.html' %}
+
+{% block content %}
+<h2>Pre-Alert List</h2>
+<table>
+    <tr>
+        <th>Invoice No</th>
+        <th>Supplier</th>
+        <th>Date</th>
+        <th>Goods</th>
+    </tr>
+    {% for alert in prealerts %}
+    <tr>
+        <td>{{ alert.invoice_no }}</td>
+        <td>{{ alert.supplier }}</td>
+        <td>{{ alert.date }}</td>
+        <td>{{ alert.goods }}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}
